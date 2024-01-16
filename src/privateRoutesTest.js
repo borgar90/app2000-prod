@@ -11,6 +11,10 @@ const routes = [
     name: "Protected path test",
     route: "/home",
   },
+  {
+    name: "Social network",
+    route: "/pages/social-network",
+  },
 ];
 
 export default routes;
