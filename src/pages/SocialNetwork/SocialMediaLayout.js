@@ -40,9 +40,9 @@ const Profile = () => {
       // Alternatively, you can make an API request to fetch user details
       // Now using details endpoint to fetch user details.
       axios
-        .get("http://localhost:3001/api/v1/grandmasterssmith/details") // Replace with your actual API endpoint
+        .get("https://grandmasterssmith-server.onrender.com") // Replace with your actual API endpoint
         .then((response) => {
-          setUserEmail(response.data.email);
+          setUserEmail(response.data.firstName);
         })
         .catch((error) => {
           console.error("Error fetching user details:", error);
@@ -59,7 +59,8 @@ const Profile = () => {
               routes={routes}
               action={{
                 type: "internal",
-                route: "https://www.creative-tim.com/product/material-kit-react",
+                route:
+                  "https://www.creative-tim.com/product/material-kit-react",
                 label: "Log out",
                 color: "error",
               }}
@@ -88,7 +89,9 @@ const Profile = () => {
                       </div>
                       <div className="p-5">
                         <div className="flex items-center mt-4">
-                          <h2 className="text-xl font-bold text-gray-800">{email}</h2>
+                          <h2 className="text-xl font-bold text-gray-800">
+                            {email}
+                          </h2>
                         </div>
 
                         <p className="text-gray-700 mt-2">
@@ -136,7 +139,9 @@ const Profile = () => {
                   <div className="">
                     <div className="bg-white p-5 rounded-lg shadow-md max-w-md  mb-4">
                       <Typography className="flex">
-                        <h2 className="text-1xl font-bold text-gray-800 mb-4">21 live games</h2>
+                        <h2 className="text-1xl font-bold text-gray-800 mb-4">
+                          21 live games
+                        </h2>
                       </Typography>
                       <MKButton color="info">Go to live games</MKButton>
                     </div>
@@ -209,7 +214,9 @@ const Profile = () => {
                               d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                             ></path>
                           </svg>
-                          <span className="ml-2 text-sm text-gray-600">Choose a chessgame</span>
+                          <span className="ml-2 text-sm text-gray-600">
+                            Choose a chessgame
+                          </span>
                         </div>
                         <span className="text-sm text-gray-500">
                           Player vs player / Player vs computer
@@ -236,7 +243,9 @@ const Profile = () => {
                           <path d="M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z"></path>
                         </svg>
                       </button>
-                      <span className="text-gray-500 text-sm">Max 280 characters</span>
+                      <span className="text-gray-500 text-sm">
+                        Max 280 characters
+                      </span>
                     </div>
                   </form>
                 </div>
@@ -254,8 +263,12 @@ const Profile = () => {
                             className="w-8 h-8 rounded-full"
                           />
                           <div className="ml-4">
-                            <p className="text-gray-800 font-semibold">John Doe</p>
-                            <p className="text-gray-500 text-sm">Posted 2 hours ago</p>
+                            <p className="text-gray-800 font-semibold">
+                              John Doe
+                            </p>
+                            <p className="text-gray-500 text-sm">
+                              Posted 2 hours ago
+                            </p>
                             <p>King&apos;s Gambit Accepted</p>
                           </div>
                         </div>
@@ -281,7 +294,9 @@ const Profile = () => {
                       </div>
 
                       <div className="mb-4">
-                        <p className="text-gray-800">Another opening for the win.</p>
+                        <p className="text-gray-800">
+                          Another opening for the win.
+                        </p>
                         <br />
                         <a href="" className="text-blue-600">
                           #KingsGambitAccepted
@@ -296,7 +311,11 @@ const Profile = () => {
                       </div>
                       <hr className="mt-5" />
                       <div className="mb-4 mt-5">
-                        <FenChess position={positions[0]} scale={1 / 4.5} className="mr-4" />
+                        <FenChess
+                          position={positions[0]}
+                          scale={1 / 4.5}
+                          className="mr-4"
+                        />
                       </div>
 
                       <hr className="mt-5" />
@@ -349,8 +368,12 @@ const Profile = () => {
                             className="w-8 h-8 rounded-full"
                           />
                           <div>
-                            <p className="text-gray-800 font-semibold">Borgar Flaen Stensrud</p>
-                            <p className="text-gray-500 text-sm">Posted 5 hours ago</p>
+                            <p className="text-gray-800 font-semibold">
+                              Borgar Flaen Stensrud
+                            </p>
+                            <p className="text-gray-500 text-sm">
+                              Posted 5 hours ago
+                            </p>
                           </div>
                         </div>
                         <div className="text-gray-500 cursor-pointer">
@@ -382,7 +405,11 @@ const Profile = () => {
                       </div>
                       <hr className="mt-5" />
                       <div className="mb-4 mt-5">
-                        <FenChess position={positions[1]} scale={1 / 4.5} className="mr-4" />
+                        <FenChess
+                          position={positions[1]}
+                          scale={1 / 4.5}
+                          className="mr-4"
+                        />
                       </div>
 
                       <hr className="mt-5" />
@@ -435,8 +462,12 @@ const Profile = () => {
                             className="w-8 h-8 rounded-full"
                           />
                           <div>
-                            <p className="text-gray-800 font-semibold">Erik-Tobias</p>
-                            <p className="text-gray-500 text-sm">Posted 3 days ago</p>
+                            <p className="text-gray-800 font-semibold">
+                              Erik-Tobias
+                            </p>
+                            <p className="text-gray-500 text-sm">
+                              Posted 3 days ago
+                            </p>
                           </div>
                         </div>
                         <div className="text-gray-500 cursor-pointer">
@@ -463,9 +494,10 @@ const Profile = () => {
                       <div className="mb-4">
                         <p className="text-gray-800">
                           Ruy Lopez <br />
-                          The Ruy Lopez, also known as the Spanish Opening, is a classic chess
-                          opening that starts with 1.e4 e5 2.Nf3 Nc6 3.Bb5. It&apos;s known for its
-                          rich history and strategic complexity, making it a favorite choice for
+                          The Ruy Lopez, also known as the Spanish Opening, is a
+                          classic chess opening that starts with 1.e4 e5 2.Nf3
+                          Nc6 3.Bb5. It&apos;s known for its rich history and
+                          strategic complexity, making it a favorite choice for
                           many chess enthusiasts.
                         </p>
                         <a href="" className="text-blue-600">
@@ -477,7 +509,11 @@ const Profile = () => {
                       </div>
                       <hr className="mt-5" />
                       <div className="mb-4 mt-5">
-                        <FenChess position={positions[2]} scale={1 / 4.5} className="mr-4" />
+                        <FenChess
+                          position={positions[2]}
+                          scale={1 / 4.5}
+                          className="mr-4"
+                        />
                       </div>
                       <hr className="mt-5" />
                       <div className="flex items-center justify-between text-gray-500 mt-5">
@@ -527,102 +563,140 @@ const Profile = () => {
                 <div className=" p-0  shadow-md   mb-5 ">
                   <div className="p-0 bg-white rounded-lg">
                     <div className="bg-white p-2 rounded-lg  shadow-md">
-                      <h2 className="text-2xl font-bold text-gray-800 ">Top 5 Ranking Players</h2>
+                      <h2 className="text-2xl font-bold text-gray-800 ">
+                        Top 5 Ranking Players
+                      </h2>
                       <ul className="pt-2">
                         <li className="flex items-center justify-between mt-5 mb-4">
                           <div className="flex items-center justify-between">
-                            <span className="text-xl font-semibold text-gray-800 mr-3">1.</span>
+                            <span className="text-xl font-semibold text-gray-800 mr-3">
+                              1.
+                            </span>
                             <img
                               src="https://picsum.photos/80"
                               alt="Player 1"
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-5">
-                              <h3 className="text-lg font-semibold text-gray-800">Player 1</h3>
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                Player 1
+                              </h3>
                               <p className="text-gray-600">Rank: 1st</p>
                             </div>
                           </div>
-                          <span className="text-xl font-semibold text-gray-800">1000 Points</span>
+                          <span className="text-xl font-semibold text-gray-800">
+                            1000 Points
+                          </span>
                         </li>
                         <hr className="mt-5 mb-5" />
                         <li className="flex items-center mt-5 justify-between mb-4">
                           <div className="flex items-center">
-                            <span className="text-xl font-semibold text-gray-800 mr-3">2.</span>
+                            <span className="text-xl font-semibold text-gray-800 mr-3">
+                              2.
+                            </span>
                             <img
                               src="https://picsum.photos/80"
                               alt="Player 2"
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-5">
-                              <h3 className="text-lg font-semibold text-gray-800">Player 2</h3>
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                Player 2
+                              </h3>
                               <p className="text-gray-600">Rank: 2nd</p>
                             </div>
                           </div>
-                          <span className="text-xl font-semibold text-gray-800">950 Points</span>
+                          <span className="text-xl font-semibold text-gray-800">
+                            950 Points
+                          </span>
                         </li>
                         <hr className="mt-5 mb-5" />
                         <li className="flex items-center mt-5 justify-between mb-4">
                           <div className="flex items-center">
-                            <span className="text-xl font-semibold text-gray-800 mr-3">3.</span>
+                            <span className="text-xl font-semibold text-gray-800 mr-3">
+                              3.
+                            </span>
                             <img
                               src="https://picsum.photos/80"
                               alt="Player 3"
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-5">
-                              <h3 className="text-lg font-semibold text-gray-800">Player 3</h3>
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                Player 3
+                              </h3>
                               <p className="text-gray-600">Rank: 3rd</p>
                             </div>
                           </div>
-                          <span className="text-xl font-semibold text-gray-800">900 Points</span>
+                          <span className="text-xl font-semibold text-gray-800">
+                            900 Points
+                          </span>
                         </li>
                         <hr className="mt-5 mb-5" />
                         <li className="flex items-center mt-5 justify-between mb-4">
                           <div className="flex items-center">
-                            <span className="text-xl font-semibold text-gray-800 mr-3">4.</span>
+                            <span className="text-xl font-semibold text-gray-800 mr-3">
+                              4.
+                            </span>
                             <img
                               src="https://picsum.photos/80"
                               alt="Player 4"
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-5">
-                              <h3 className="text-lg font-semibold text-gray-800">Player 4</h3>
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                Player 4
+                              </h3>
                               <p className="text-gray-600">Rank: 4th</p>
                             </div>
                           </div>
-                          <span className="text-xl font-semibold text-gray-800">850 Points</span>
+                          <span className="text-xl font-semibold text-gray-800">
+                            850 Points
+                          </span>
                         </li>
                         <hr className="mt-5 mb-5" />
                         <li className="flex items-center mt-5 justify-between">
                           <div className="flex items-center">
-                            <span className="text-xl font-semibold text-gray-800 mr-3">5.</span>
+                            <span className="text-xl font-semibold text-gray-800 mr-3">
+                              5.
+                            </span>
                             <img
                               src="https://picsum.photos/80"
                               alt="Player 5"
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-5">
-                              <h3 className="text-lg font-semibold text-gray-800">Player 5</h3>
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                Player 5
+                              </h3>
                               <p className="text-gray-600">Rank: 5th</p>
                             </div>
                           </div>
-                          <span className="text-xl font-semibold text-gray-800">800 Points</span>
+                          <span className="text-xl font-semibold text-gray-800">
+                            800 Points
+                          </span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="bg-white p-8 rounded-lg shadow-md w-full mt-5 mb-5">
                     <div className="lg:col-span-1">
-                      <h2 className="text-2xl font-bold text-gray-800 mb-4">Latest Gameplay</h2>
+                      <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                        Latest Gameplay
+                      </h2>
 
-                      <p className="text-gray-600 mb-4">Check out our most recent chess game:</p>
+                      <p className="text-gray-600 mb-4">
+                        Check out our most recent chess game:
+                      </p>
 
                       <div className="flex flex-col bg-gray-100 p-2 rounded-md mb-4">
                         <div className="text-lg font-semibold text-gray-800 mr-5">
-                          Time Elapsed: <span className="text-blue-500">2:35:17</span>
+                          Time Elapsed:{" "}
+                          <span className="text-blue-500">2:35:17</span>
                         </div>
                         <div className="text-lg  font-semibold text-gray-800">
-                          Victor: <span className="text-green-500">PlayerA</span>
+                          Victor:{" "}
+                          <span className="text-green-500">PlayerA</span>
                         </div>
                       </div>
                       <ScaledRandomVsRandom scale={1 / 4} />
