@@ -44,7 +44,7 @@ const Profile = () => {
           "https://grandmasterssmith-server.onrender.com:3001/api/v1/profile/name"
         ) // Replace with your actual API endpoint
         .then((response) => {
-          setUserEmail(response.data.firstName[0]);
+          setUserEmail(response[0].firstName);
         })
         .catch((error) => {
           console.error("Error fetching user details:", error);
