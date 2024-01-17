@@ -40,7 +40,9 @@ const Profile = () => {
       // Alternatively, you can make an API request to fetch user details
       // Now using details endpoint to fetch user details.
       axios
-        .get("https://grandmasterssmith-server.onrender.com") // Replace with your actual API endpoint
+        .get(
+          "https://grandmasterssmith-server.onrender.com/api/v1/profile/name"
+        ) // Replace with your actual API endpoint
         .then((response) => {
           setUserEmail(response.data.firstName[0]);
         })
